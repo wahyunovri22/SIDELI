@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="creative.can.com.suratpengantar">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".LoginActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.UserActivity"
+            android:label="@string/title_activity_user"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Activity.DaftarWargaActivity"
+            android:label="@string/title_activity_daftar_warga"
+            android:parentActivityName=".LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="creative.can.com.suratpengantar.LoginActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.SettingActivity"
+            android:label="@string/title_activity_setting"
+            android:parentActivityName=".Activity.UserActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="creative.can.com.suratpengantar.Activity.UserActivity" />
+        </activity>
+        <activity
+            android:name=".ActivityRT.HomeRTctivity"
+            android:label="@string/title_activity_home_rtctivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ActivityRT.DetailPermintaanSuratMasukActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ActivityRW.HomeRWActivity"
+            android:label="@string/title_activity_home_rw"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.DetailNewsDuaActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.EditProfilActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.SuratHilangActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.SuratHewanActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.SuratKetNikahActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.SuratKetUsahaActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.SuratBelumpernahMenikahActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.SuratPernyataanKuasaActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.SPTJMActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Activity.SuratTidakMampuActivity"
+            android:label="@string/title_surat_tidak_mampu"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".Activity.DetailSuratTidakMampuActivity"
+            android:screenOrientation="portrait"></activity>
+    </application>
+
+</manifest>

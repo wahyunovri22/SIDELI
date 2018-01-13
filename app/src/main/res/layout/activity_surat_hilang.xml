@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="creative.can.com.suratpengantar.Activity.SuratHilangActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edt_id_surat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/id_surat"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelText="@string/id_surat" />
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edt_nama_surat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/nama_surat"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelText="@string/nama_surat" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edt_nik"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/nik"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelText="@string/nik" />
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edt_kk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/no_kk"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelText="@string/no_kk" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edt_nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/nama"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelText="@string/nama" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edt_pekerjaan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/pekerjaan"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelText="@string/pekerjaan" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edt_tempat_lahir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/tempat_lahir"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelText="@string/tempat_lahir" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edt_agama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/agama"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelText="@string/agama" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edt_tanggal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/tanggal_lahir"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelText="@string/tanggal_lahir" />
+
+        <RadioGroup
+            android:id="@+id/rbg_kelamin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/kelamin"
+                android:textColor="@color/hitam" />
+
+            <RadioButton
+                android:id="@+id/rb_pria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/pria" />
+
+            <RadioButton
+                android:id="@+id/rb_wanita"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wanita" />
+
+        </RadioGroup>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edt_alamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/alamat"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelText="@string/alamat" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edt_kelurahan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/kelurahan"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelText="@string/kelurahan" />
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edt_rt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/rt"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelText="@string/rt" />
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edt_rw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/rw"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelText="@string/rw" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edt_kecamatan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/kecamatan"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelText="@string/kecamatan" />
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edt_kabupaten"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/kabupaten"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelText="@string/kabupaten" />
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edt_provinsi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/provinsi"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelText="@string/provinsi" />
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edt_status_nikah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/status_nikah"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelText="@string/status_nikah" />
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edt_warganegara"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/kewarganegaraaan"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelText="@string/kewarganegaraaan" />
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edt_status_kk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/status_kk"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelText="@string/status_kk" />
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edt_pendidikan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/pendidikan"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelText="@string/pendidikan" />
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edt_keperluan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="keperluan"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelText="keperluan" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/tgl_kirim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/tgl_kirim"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelText="@string/tgl_kirim" />
+
+        <Button
+            android:id="@+id/btn_daftar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Daftar Surat" />
+    </LinearLayout>
+</ScrollView>

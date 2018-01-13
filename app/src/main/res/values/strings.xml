@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">SIDELI</string>
+    <string name="title_activity_user">UserActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="tulisan_llogin">Login Akun</string>
+    <string name="header_daftar_warga">Tambahkan Data Warga Anda</string>
+
+    <!-- untuk activity daftar warga -->
+
+    <string name="nama">Nama Lengkap</string>
+    <string name="no_ktp">No. KTP</string>
+    <string name="kelamin">Jenis Kelamin :</string>
+    <string name="email">Email</string>
+    <string name="katasandi">Kata Sandi</string>
+    <string name="alamat">Alamat</string>
+    <string name="kodepos">Kode Pos</string>
+    <string name="pekerjaan">Pekerjaan</string>
+    <string name="no_tlp">No. Telepon/HP</string>
+    <string name="pria">Pria</string>
+    <string name="wanita">Wanita</string>
+    <string name="pilih"> -- Pilih --</string>
+    <string name="status">Status</string>
+    <string name="tempat_lahir">Tempat Lahir</string>
+    <string name="tanggal_lahir">Tanggal Lahir</string>
+    <string name="jenis_usaha">Jenis Usaha</string>
+    <string name="lokasi">Lokasi</string>
+    <string name="suku">Suku</string>
+    <string name="harga">harga</string>
+    <string name="keterangan">keterangan</string>
+    <string name="tgl_kirim">Tanggal Pengiriman</string>
+    <string name="id_surat">ID Surat</string>
+    <string name="nomor_surat">Nomor Surat</string>
+    <string name="nama_surat">Nama Surat</string>
+    <string name="kecamatan">Kecamatan</string>
+    <string name="kabupaten">Kabupaten</string>
+    <string name="provinsi">Provinsi</string>
+    <string name="status_nikah">Status Nikah</string>
+    <string name="status_kk">Status KK</string>
+    <string name="pendidikan">Pendidikan</string>
+    <string name="kewarganegaraaan">Kewarganegaraan</string>
+    <string name="no_kk">No KK</string>
+    <string name="kelurahan">Kelurahan</string>
+    <string name="rt">RT</string>
+    <string name="rw">RW</string>
+    <string name="emai">Email</string>
+    <string name="phone">No Tlp</string>
+
+    <!-- untuk history -->
+    <string name="nik">NIK</string>
+    <string name="tanggal">Tanggal</string>
+    <string name="passwordlama">Password Lama</string>
+    <string name="passwordbaru">Password Baru</string>
+    <string name="agama">Agama</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_daftar_warga">DaftarWargaActivity</string>
+    <string name="title_activity_setting">SettingActivity</string>
+    <string name="title_activity_history">HistoryActivity</string>
+    <string name="title_activity_surat_pending">SuratPendingActivity</string>
+    <string name="title_activity_edit_profil">EditProfilActivity</string>
+    <string name="title_activity_home_rtctivity">HomeRTctivity</string>
+    <string name="title_activity_home_rw">HomeRWActivity</string>
+    <string name="title_activity_detail_news">DetailNewsActivity</string>
+    <string name="title_surat_tidak_mampu">Surat Tidak Mampu</string>
+</resources>

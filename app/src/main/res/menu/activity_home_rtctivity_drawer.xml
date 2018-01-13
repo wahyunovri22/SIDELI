@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_news"
+            android:icon="@drawable/ic_chrome_reader_mode_black_24dp"
+            android:title="News" />
+        <item
+            android:id="@+id/nav_profil"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="Profil" />
+        <item
+            android:id="@+id/nav_surat_menunggu"
+            android:icon="@drawable/ic_folder_black_24dp"
+            android:title="Surat Menunggu Diketahui" />
+        <item
+            android:id="@+id/nav_surat_masuk"
+            android:icon="@drawable/ic_email_black_24dp"
+            android:title="Surat Masuk" />
+        <item
+            android:id="@+id/nav_pending"
+            android:icon="@drawable/ic_drafts_black_24dp"
+            android:visible="false"
+            android:title="Pending" />
+        <item
+            android:id="@+id/nav_tambah_warga"
+            android:icon="@drawable/ic_person_add_black_24dp"
+            android:title="Tambah Warga" />
+        <item
+            android:id="@+id/nav_history"
+            android:icon="@drawable/ic_assignment_black_24dp"
+            android:title="History" />
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="Setting" />
+        <item
+            android:id="@+id/nav_logut"
+            android:title="Logout" />
+    </group>
+
+</menu>

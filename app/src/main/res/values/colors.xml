@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#a72185</color>
+    <color name="colorPrimaryDark">#740058</color>
+    <color name="colorAccent">#a72185</color>
+    <color name="light">#dc58b5</color>
+    <color name="bg_login">#7693f4</color>
+    <color name="putih">#fff</color>
+    <color name="hitam">#050505</color>
+    <color name="merah">#ec0c0c</color>
+</resources>

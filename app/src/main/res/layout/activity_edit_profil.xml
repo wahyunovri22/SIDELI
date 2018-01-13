@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:id="@+id/content"
+    tools:context="creative.can.com.suratpengantar.Activity.EditProfilActivity">
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/edt_edit_nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/nama"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelText="@string/nama"
+        />
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/edt_alamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/alamat"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelText="@string/alamat" />
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/edt_tempat_lahir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/tempat_lahir"
+        android:textColor="@color/putih"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelText="@string/tempat_lahir" />
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/edt_ttl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/tanggal_lahir"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelText="@string/tanggal_lahir" />
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/edt_pekerjaan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/pekerjaan"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelText="@string/pekerjaan" />
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/edt_agama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/agama"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelText="@string/agama" />
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="save"
+        android:visibility="gone"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btn_update2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_menu_save" />
+</LinearLayout>
