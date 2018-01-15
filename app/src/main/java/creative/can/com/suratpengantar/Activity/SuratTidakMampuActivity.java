@@ -347,7 +347,7 @@ public class SuratTidakMampuActivity extends AppCompatActivity {
 //                builder.create().show();
 //            }
 //        });
-        
+
 //        edtRt.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {

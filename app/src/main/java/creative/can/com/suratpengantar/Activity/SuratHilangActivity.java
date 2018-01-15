@@ -1,6 +1,7 @@
 package creative.can.com.suratpengantar.Activity;
 
 import android.app.DatePickerDialog;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
@@ -20,8 +21,14 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
+import creative.can.com.suratpengantar.Model.ResponseModel;
 import creative.can.com.suratpengantar.R;
 import creative.can.com.suratpengantar.helper.Config;
+import creative.can.com.suratpengantar.retrofit.ApiRequest;
+import creative.can.com.suratpengantar.retrofit.RetrofitConfig;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class SuratHilangActivity extends AppCompatActivity {
 
@@ -29,8 +36,9 @@ public class SuratHilangActivity extends AppCompatActivity {
     int mYear;
     int mMonth;
     int mDay;
+    ProgressDialog pd;
 
-    String ambil_jk;
+    String jk,ambil_jk;
 
 
     Config config;
@@ -67,6 +75,7 @@ public class SuratHilangActivity extends AppCompatActivity {
         setContentView(R.layout.activity_surat_hilang);
         initView();
 
+        pd = new ProgressDialog(this);
         config = new Config(this);
 
         awal();
@@ -136,58 +145,7 @@ public class SuratHilangActivity extends AppCompatActivity {
         btnDaftar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                if(!validasi()){
-//                    return;
-//                }
-//                if(!validasi()){
-//                    return;
-//                }
-//                if(!validasi()){
-//                    return;
-//                }
-//                if(!validasi()){
-//                    return;
-//                }
-//                if(!validasi()){
-//                    return;
-//                }
-//                if(!validasi()){
-//                    return;
-//                }
-//                if(!validasi()){
-//                    return;
-//                }
-//                if(!validasi()){
-//                    return;
-//                }
-//                if(!validasi()){
-//                    return;
-//                }
-//                if(!validasi()){
-//                    return;
-//                }
-//                if(!validasi()){
-//                    return;
-//                }
-//                if(!validasi()){
-//                    return;
-//                }
-//                if(!validasi()){
-//                    return;
-//                }
-//                if(!validasi()){
-//                    return;
-//                }
-//                if(!validasi()){
-//                    return;
-//                }
-//                if(!validasi()){
-//                    return;
-//                }
-//                if(!validasi()){
-//                    return;
-//                }
-                Toast.makeText(getApplicationContext(), "Fitur Belum ada", Toast.LENGTH_SHORT).show();
+               daftar();
             }
         });
 
@@ -378,78 +336,78 @@ public class SuratHilangActivity extends AppCompatActivity {
 //            }
 //        });
 
-        edtRt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                final CharSequence[] dialogItem = {"1", "2", "3", "4", "5", "6"};
-                AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
-                builder.setTitle("Pilih RT");
-                builder.setItems(dialogItem, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        switch (i) {
-                            case 0:
-                                edtRt.setText("1");
-                                break;
-                            case 1:
-                                edtRt.setText("2");
-                                break;
-                            case 2:
-                                edtRt.setText("3");
-                                break;
-                            case 3:
-                                edtRt.setText("4");
-                                break;
-                            case 4:
-                                edtRt.setText("5");
-                                break;
-                            case 5:
-                                edtRt.setText("6");
-                                break;
-                        }
-                    }
-                });
-                builder.create().show();
-            }
-        });
-
-        edtRw.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                final CharSequence[] dialogItem = {"1", "2", "3", "4", "5", "6"};
-                AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
-                builder.setTitle("Pilih RW");
-                builder.setItems(dialogItem, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        switch (i) {
-                            case 0:
-                                edtRw.setText("1");
-                                break;
-                            case 1:
-                                edtRw.setText("2");
-                                break;
-                            case 2:
-                                edtRw.setText("3");
-                                break;
-                            case 3:
-                                edtRw.setText("4");
-                                break;
-                            case 4:
-                                edtRw.setText("5");
-                                break;
-                            case 5:
-                                edtRw.setText("6");
-                                break;
-                        }
-                    }
-                });
-                builder.create().show();
-            }
-        });
+//        edtRt.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                final CharSequence[] dialogItem = {"1", "2", "3", "4", "5", "6"};
+//                AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+//                builder.setTitle("Pilih RT");
+//                builder.setItems(dialogItem, new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialogInterface, int i) {
+//
+//                        switch (i) {
+//                            case 0:
+//                                edtRt.setText("1");
+//                                break;
+//                            case 1:
+//                                edtRt.setText("2");
+//                                break;
+//                            case 2:
+//                                edtRt.setText("3");
+//                                break;
+//                            case 3:
+//                                edtRt.setText("4");
+//                                break;
+//                            case 4:
+//                                edtRt.setText("5");
+//                                break;
+//                            case 5:
+//                                edtRt.setText("6");
+//                                break;
+//                        }
+//                    }
+//                });
+//                builder.create().show();
+//            }
+//        });
+//
+//        edtRw.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View view) {
+//                final CharSequence[] dialogItem = {"1", "2", "3", "4", "5", "6"};
+//                AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+//                builder.setTitle("Pilih RW");
+//                builder.setItems(dialogItem, new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialogInterface, int i) {
+//
+//                        switch (i) {
+//                            case 0:
+//                                edtRw.setText("1");
+//                                break;
+//                            case 1:
+//                                edtRw.setText("2");
+//                                break;
+//                            case 2:
+//                                edtRw.setText("3");
+//                                break;
+//                            case 3:
+//                                edtRw.setText("4");
+//                                break;
+//                            case 4:
+//                                edtRw.setText("5");
+//                                break;
+//                            case 5:
+//                                edtRw.setText("6");
+//                                break;
+//                        }
+//                    }
+//                });
+//                builder.create().show();
+//            }
+//        });
 
 //        edtKecamatan.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -545,7 +503,7 @@ public class SuratHilangActivity extends AppCompatActivity {
         edtNik.setText(config.getSpId());
         edtNamaSurat.setText("Surat Keterangan Hilang");
         edtNamaSurat.setFocusable(false);
-        //edtIdSurat.setText("3");
+        edtIdSurat.setText("4");
         edtIdSurat.setFocusable(false);
         edtWarganegara.setText("WNI");
         edtTanggal.setFocusable(false);
@@ -561,92 +519,206 @@ public class SuratHilangActivity extends AppCompatActivity {
         //edtKecamatan.setFocusable(false);
     }
 
-//    public Boolean validasi(){
-//        if (edtNama.getText().toString().isEmpty()){
-//            edtNama.setError("Harus diisi");
-//            edtNama.requestFocus();
-//            return false;
-//        }
-//        if (edtPekerjaan.getText().toString().isEmpty()){
-//            edtPekerjaan.setError("Harus diisi");
-//            edtPekerjaan.requestFocus();
-//            return false;
-//        }
-//        if (edtTempatLahir.getText().toString().isEmpty()){
-//            edtTempatLahir.setError("Harus diisi");
-//            edtTempatLahir.requestFocus();
-//            return false;
-//        }
-//        if (edtAgama.getText().toString().isEmpty()){
-//            edtAgama.setError("Harus diisi");
-//            edtAgama.requestFocus();
-//            return false;
-//        }
-//        if (edtTanggal.getText().toString().isEmpty()){
-//            edtTanggal.setError("Harus diisi");
-//            edtTanggal.requestFocus();
-//            return false;
-//        }
-//        if (edtAlamat.getText().toString().isEmpty()){
-//            edtAlamat.setError("Harus diisi");
-//            edtAlamat.requestFocus();
-//            return false;
-//        }
-//        if (edtKelurahan.getText().toString().isEmpty()){
-//            edtKelurahan.setError("Harus diisi");
-//            edtKelurahan.requestFocus();
-//            return false;
-//        }
-//        if (edtRt.getText().toString().isEmpty()){
-//            edtRt.setError("Harus diisi");
-//            edtRt.requestFocus();
-//            return false;
-//        }
-//        if (edtRw.getText().toString().isEmpty()){
-//            edtRw.setError("Harus diisi");
-//            edtRw.requestFocus();
-//            return false;
-//        }
-//        if (edtKecamatan.getText().toString().isEmpty()){
-//            edtKecamatan.setError("Harus diisi");
-//            edtKecamatan.requestFocus();
-//            return false;
-//        }
-//        if (edtKabupaten.getText().toString().isEmpty()){
-//            edtKabupaten.setError("Harus diisi");
-//            edtKabupaten.requestFocus();
-//            return false;
-//        }
-//        if (edtProvinsi.getText().toString().isEmpty()){
-//            edtProvinsi.setError("Harus diisi");
-//            edtProvinsi.requestFocus();
-//            return false;
-//        }
-//        if (edtStatusNikah.getText().toString().isEmpty()){
-//            edtStatusNikah.setError("Harus diisi");
-//            edtStatusNikah.requestFocus();
-//            return false;
-//        }
-//        if (edtWarganegara.getText().toString().isEmpty()){
-//            edtWarganegara.setError("Harus diisi");
-//            edtWarganegara.requestFocus();
-//            return false;
-//        }
-//        if (edtStatusKk.getText().toString().isEmpty()){
-//            edtStatusKk.setError("Harus diisi");
-//            edtStatusKk.requestFocus();
-//            return false;
-//        }
-//        if (edtPendidikan.getText().toString().isEmpty()){
-//            edtPendidikan.setError("Harus diisi");
-//            edtPendidikan.requestFocus();
-//            return false;
-//        }
-//        if (edtKeperluan.getText().toString().isEmpty()){
-//            edtKeperluan.setError("Harus diisi");
-//            edtKeperluan.requestFocus();
-//            return false;
-//        }
-//        return true;
-//    }
+    public Boolean validasi(){
+        if (edtNama.getText().toString().isEmpty()){
+            edtNama.setError("Harus diisi");
+            edtNama.requestFocus();
+            return false;
+        }
+        if (edtPekerjaan.getText().toString().isEmpty()){
+            edtPekerjaan.setError("Harus diisi");
+            edtPekerjaan.requestFocus();
+            return false;
+        }
+        if (edtTempatLahir.getText().toString().isEmpty()){
+            edtTempatLahir.setError("Harus diisi");
+            edtTempatLahir.requestFocus();
+            return false;
+        }
+        if (edtAgama.getText().toString().isEmpty()){
+            edtAgama.setError("Harus diisi");
+            edtAgama.requestFocus();
+            return false;
+        }
+        if (edtTanggal.getText().toString().isEmpty()){
+            edtTanggal.setError("Harus diisi");
+            edtTanggal.requestFocus();
+            return false;
+        }
+        if (edtAlamat.getText().toString().isEmpty()){
+            edtAlamat.setError("Harus diisi");
+            edtAlamat.requestFocus();
+            return false;
+        }
+        if (edtKelurahan.getText().toString().isEmpty()){
+            edtKelurahan.setError("Harus diisi");
+            edtKelurahan.requestFocus();
+            return false;
+        }
+        if (edtRt.getText().toString().isEmpty()){
+            edtRt.setError("Harus diisi");
+            edtRt.requestFocus();
+            return false;
+        }
+        if (edtRw.getText().toString().isEmpty()){
+            edtRw.setError("Harus diisi");
+            edtRw.requestFocus();
+            return false;
+        }
+        if (edtKecamatan.getText().toString().isEmpty()){
+            edtKecamatan.setError("Harus diisi");
+            edtKecamatan.requestFocus();
+            return false;
+        }
+        if (edtKabupaten.getText().toString().isEmpty()){
+            edtKabupaten.setError("Harus diisi");
+            edtKabupaten.requestFocus();
+            return false;
+        }
+        if (edtProvinsi.getText().toString().isEmpty()){
+            edtProvinsi.setError("Harus diisi");
+            edtProvinsi.requestFocus();
+            return false;
+        }
+        if (edtStatusNikah.getText().toString().isEmpty()){
+            edtStatusNikah.setError("Harus diisi");
+            edtStatusNikah.requestFocus();
+            return false;
+        }
+        if (edtWarganegara.getText().toString().isEmpty()){
+            edtWarganegara.setError("Harus diisi");
+            edtWarganegara.requestFocus();
+            return false;
+        }
+        if (edtStatusKk.getText().toString().isEmpty()){
+            edtStatusKk.setError("Harus diisi");
+            edtStatusKk.requestFocus();
+            return false;
+        }
+        if (edtPendidikan.getText().toString().isEmpty()){
+            edtPendidikan.setError("Harus diisi");
+            edtPendidikan.requestFocus();
+            return false;
+        }
+        if (edtKeperluan.getText().toString().isEmpty()){
+            edtKeperluan.setError("Harus diisi");
+            edtKeperluan.requestFocus();
+            return false;
+        }
+        return true;
+    }
+
+    public void daftar() {
+        if(!validasi()){
+            return;
+        }
+        if(!validasi()){
+            return;
+        }
+        if(!validasi()){
+            return;
+        }
+        if(!validasi()){
+            return;
+        }
+        if(!validasi()){
+            return;
+        }
+        if(!validasi()){
+            return;
+        }
+        if(!validasi()){
+            return;
+        }
+        if(!validasi()){
+            return;
+        }
+        if(!validasi()){
+            return;
+        }
+        if(!validasi()){
+            return;
+        }
+        if(!validasi()){
+            return;
+        }
+        if(!validasi()){
+            return;
+        }
+        if(!validasi()){
+            return;
+        }
+        if(!validasi()){
+            return;
+        }
+        if(!validasi()){
+            return;
+        }
+        if(!validasi()){
+            return;
+        }
+        if(!validasi()){
+            return;
+        }
+
+        String id = edtIdSurat.getText().toString();
+        String keperluan = edtKeperluan.getText().toString();
+        String status = "WAITING";
+        String nik2 = edtNik.getText().toString();
+        String kk = edtKk.getText().toString();
+        String nama = edtNama.getText().toString();
+        String tempatlahir = edtTempatLahir.getText().toString();
+        String tgl = edtTanggal.getText().toString();
+        if (rbPria.isChecked()){
+            jk = "1";
+        }else {
+            jk = "2";
+        }
+        String rw = edtRw.getText().toString();
+        String rt = edtRt.getText().toString();
+        String alamat = edtAlamat.getText().toString();
+        String kelurahan = edtKelurahan.getText().toString();
+        String kecamatan = edtKecamatan.getText().toString();
+        String kabupaten = edtKabupaten.getText().toString();
+        String provinsi = edtProvinsi.getText().toString();
+        String agama = edtAgama.getText().toString();
+        String status_nikah = edtStatusNikah.getText().toString();
+        String status_kk = edtStatusKk.getText().toString();
+        String pendidikan = edtPendidikan.getText().toString();
+        String pekerjaan = edtPekerjaan.getText().toString();
+        String penduduk = edtWarganegara.getText().toString();
+        pd.setMessage("loading");
+        pd.setCancelable(false);
+        pd.show();
+
+        ApiRequest apiRequest = RetrofitConfig.getRetrofit().create(ApiRequest.class);
+        Call<ResponseModel> get = apiRequest.insertSurat(id, keperluan, status, nik2, kk, nama, tempatlahir, tgl,
+                jk, alamat, rt, rw, kelurahan, kecamatan, kabupaten, provinsi, agama, status_nikah, status_kk, pendidikan,
+                pekerjaan, penduduk);
+        get.enqueue(new Callback<ResponseModel>() {
+            @Override
+            public void onResponse(Call<ResponseModel> call, Response<ResponseModel> response) {
+                pd.dismiss();
+                String kode = response.body().getKode();
+                String pesan = response.body().getPesan();
+                if (kode.equals("1")) {
+                    Toast.makeText(getApplicationContext(), pesan, Toast.LENGTH_SHORT).show();
+//                    Fragment fragment = null;
+//                    fragment = PermintaanSuratFragment.newInstance();
+//                    FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+//                    transaction.replace(R.id.content2, fragment);
+//                    transaction.commit();
+                    finish();
+                } else {
+                    Toast.makeText(getApplicationContext(), pesan, Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseModel> call, Throwable t) {
+                pd.dismiss();
+                Toast.makeText(getApplicationContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
 }

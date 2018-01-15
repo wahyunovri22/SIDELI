@@ -70,9 +70,9 @@ public class LoginActivity extends AppCompatActivity {
                     edtUsername.setError("Isi Username");
                 } else if (edtPassword.getText().toString().isEmpty()) {
                     edtPassword.setError("Isi Password");
-                }else if (edtUsername.length() < 16){
-                    edtUsername.setError("nik anda kurang harus 16 digit");
-                } else {
+//                }else if (edtUsername.length() < 16){
+//                    edtUsername.setError("nik anda kurang harus 16 digit");
+//                } else {
                     Login();
                 }
             }
