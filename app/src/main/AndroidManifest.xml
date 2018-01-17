@@ -92,7 +92,10 @@
         <activity
             android:name=".Activity.DetailSuratTidakMampuActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".Activity.BantuanActivity"></activity>
+        <activity android:name=".Activity.BantuanActivity"
+            android:label="@string/action_settings">
+
+        </activity>
     </application>
 
 </manifest>

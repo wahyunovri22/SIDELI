@@ -1,5 +1,6 @@
 package creative.can.com.suratpengantar.Activity;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +12,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import creative.can.com.suratpengantar.LoginActivity;
 import creative.can.com.suratpengantar.Model.RuleModel;
 import creative.can.com.suratpengantar.R;
 import creative.can.com.suratpengantar.helper.Config;
@@ -43,6 +45,7 @@ public class BantuanActivity extends AppCompatActivity {
         posisiRT = config.getSpPosisirt();
         posisiRW = config.getSpPosisirw();
 
+        final ProgressDialog loading = ProgressDialog.show(BantuanActivity.this, "Loading", "Harap tunggu...", false, false);
         ApiRequest api = RetrofitConfig.getRetrofit().create(ApiRequest.class);
         Call<ArrayList<RuleModel>> call = api.getRuleLogin();
         call.enqueue(new Callback<ArrayList<RuleModel>>() {
@@ -50,47 +53,27 @@ public class BantuanActivity extends AppCompatActivity {
             public void onResponse(Call<ArrayList<RuleModel>> call, Response<ArrayList<RuleModel>> response) {
                 list = response.body();
                 for (final RuleModel s : list) {
-//                    if ((s.getUGROUPRULE() != null && s.getUGROUPRULE().contains("U_RT"))) {
-//                        String rule = s.getUNAME().toString().trim();
-//                        Toast.makeText(BantuanActivity.this, "Rule : " + rule , Toast.LENGTH_SHORT).show();
-////                        LayoutInflater layoutInflater = (LayoutInflater) getBaseContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-////                        View addView = layoutInflater.inflate(R.layout.list_waiting, null);
-////                        final TextView lurah = (TextView) addView.findViewById(R.id.txt_lurah);
-////                        final TextView noLurah = (TextView) addView.findViewById(R.id.txt_nomor_lurah);
-////                        final TextView rt = (TextView) addView.findViewById(R.id.txt_rt);
-////                        final TextView noRt = (TextView) addView.findViewById(R.id.txt_nomor_rt);
-////                        final TextView rw = (TextView) addView.findViewById(R.id.txt_rw);
-////                        final TextView noRw = (TextView) addView.findViewById(R.id.txt_nomor_rw);
-//
-////                        lurah.setText(s.getWNAMA());
-////                        noLurah.setText(s.getUMOBILE());
-//
-////                        div.addView(addView);
-//
-//                        txtLurah.setText(s.getWNAMA());
-//                    }
                     if (s.getWRT().equals(posisiRT) && s.getWRW().equals(posisiRW) && s.getUGROUPRULE().equals("U_RT")){
-                        //Toast.makeText(BantuanActivity.this, ""+s.getWNAMA(), Toast.LENGTH_SHORT).show();
                         txtRt.setText(s.getWNAMA());
                         txtNomorRt.setText(s.getUMOBILE());
                     }
                     if (s.getWRT().equals(posisiRT) && s.getWRW().equals(posisiRW) && s.getUGROUPRULE().equals("U_RW")){
-                     //   Toast.makeText(BantuanActivity.this, ""+s.getWNAMA(), Toast.LENGTH_SHORT).show();
                         txtRw.setText(s.getWNAMA());
                         txtNomorRw.setText(s.getUMOBILE());
                     }
 
                     if (s.getUGROUPRULE().equals("U_LURAH")){
-                        //Toast.makeText(BantuanActivity.this, ""+s.getWNAMA(), Toast.LENGTH_SHORT).show();
                         txtLurah.setText(s.getWNAMA());
-                        txtLurah.setText(s.getUMOBILE());
+                        txtNomorLurah.setText(s.getUMOBILE());
                     }
                 }
+                loading.dismiss();
             }
 
             @Override
             public void onFailure(Call<ArrayList<RuleModel>> call, Throwable t) {
-
+                loading.dismiss();
+                Toast.makeText(BantuanActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
 

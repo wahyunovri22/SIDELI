@@ -105,7 +105,18 @@ public interface ApiRequest {
                                      @Field("W_TMP_LAHIR") String W_TMP_LAHIR,
                                      @Field("W_TGL_LAHIR") String W_TGL_LAHIR,
                                      @Field("W_PEKERJAAN") String W_PEKERJAAN,
-                                     @Field("W_AGAMA") String W_AGAMA);
+                                     @Field("W_AGAMA") String W_AGAMA,
+                                     @Field("W_JK") String W_JK,
+                                     @Field("W_KELURAHAN") String W_KELURAHAN,
+                                     @Field("W_RT") String W_RT,
+                                     @Field("W_RW") String W_RW,
+                                     @Field("W_KECAMATAN") String W_KECAMATAN,
+                                     @Field("W_KABUPATEN") String W_KABUPATEN,
+                                     @Field("W_PROVINSI") String W_PROVINSI,
+                                     @Field("W_STATUS") String W_STATUS,
+                                     @Field("W_STATUS_PENDUDUK") String W_STATUS_PENDUDUK,
+                                     @Field("W_STATUS_KK") String W_STATUS_KK,
+                                     @Field("W_PENDIDIKAN") String W_PENDIDIKAN);
 
     @FormUrlEncoded
     @POST("profil2.php")

@@ -57,6 +57,7 @@
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/ic_account_box_black_24dp"
             android:hint="@string/nik"
+            android:inputType="number"
             android:maxLength="16"
             app:met_floatingLabelText="@string/nik"
             app:met_floatingLabel="highlight"

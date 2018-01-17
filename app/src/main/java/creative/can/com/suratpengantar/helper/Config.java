@@ -32,6 +32,7 @@ public class Config {
     public static final String SP_PROVINSI = "sProvinsi";
     public static final String SP_STATUS_NIKAH = "sStatusNikah";
     public static final String SP_STATUS_KK = "sStatusKK";
+    public static final String SP_PENDUDUK = "sPenduduk";
     public static final String SP_PENDIDIKAN = "sPendidikan";
     public static final String SP_ID = "spId";
     public static final String SP_SUDAH_LOGIN = "spSudahLogin";
@@ -135,6 +136,10 @@ public class Config {
 
     public String getSpPendidikan() {
         return sp.getString(SP_PENDIDIKAN, "");
+    }
+
+    public String getSpPenduduk() {
+        return sp.getString(SP_PENDUDUK, "");
     }
 
     public String getSpJk() {
