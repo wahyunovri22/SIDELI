@@ -12,8 +12,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitConfig {
 
-    //private static final String base_url= "http://desaliterasi.can.web.id/api/";
-    private static final String base_url= "http://192.168.43.65/api/";
+    private static final String base_url= "http://desaliterasi.can.web.id/api/";
+    //private static final String base_url= "http://192.168.43.65/api/";
     //private static final String base_url= "http://192.168.100.44/api/";
 
     public static Retrofit getRetrofit() {

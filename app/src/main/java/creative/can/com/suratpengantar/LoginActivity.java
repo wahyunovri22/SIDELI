@@ -70,9 +70,9 @@ public class LoginActivity extends AppCompatActivity {
                     edtUsername.setError("Isi Username");
                 } else if (edtPassword.getText().toString().isEmpty()) {
                     edtPassword.setError("Isi Password");
-//                }else if (edtUsername.length() < 16){
-//                    edtUsername.setError("nik anda kurang harus 16 digit");
-//                } else {
+                }else if (edtUsername.length() < 16){
+                    edtUsername.setError("nik anda kurang harus 16 digit");
+                } else {
                     Login();
                 }
             }
@@ -161,6 +161,17 @@ public class LoginActivity extends AppCompatActivity {
                                 config.saveSPString(config.SP_TTL, ttl);
                                 config.saveSPString(config.SP_PEKERJAAN, pekerjaan);
                                 config.saveSPString(config.SP_AGAMa, agama);
+                                config.saveSPString(config.SP_NO_KK, kk);
+                                config.saveSPString(config.SP_KELURAHAN, kelurahan);
+                                config.saveSPString(config.SP_RT, rt);
+                                config.saveSPString(config.SP_RW, rw);
+                                config.saveSPString(config.SP_JK, jk);
+                                config.saveSPString(config.SP_KECAMATAN, kecamatan);
+                                config.saveSPString(config.SP_KABUPATEN, kabupaten);
+                                config.saveSPString(config.SP_PROVINSI, provinsi);
+                                config.saveSPString(config.SP_STATUS_NIKAH, status_nikah);
+                                config.saveSPString(config.SP_STATUS_KK, status_kk);
+                                config.saveSPString(config.SP_PENDIDIKAN, pendidikan);
                                 // Shared Pref ini berfungsi untuk menjadi trigger session login
                                 config.saveSPBoolean(config.SP_SUDAH_LOGIN, true);
                                 Intent intent = new Intent(getApplicationContext(), HomeRTctivity.class)
@@ -180,6 +191,17 @@ public class LoginActivity extends AppCompatActivity {
                                 config.saveSPString(config.SP_TTL, ttl);
                                 config.saveSPString(config.SP_PEKERJAAN, pekerjaan);
                                 config.saveSPString(config.SP_AGAMa, agama);
+                                config.saveSPString(config.SP_NO_KK, kk);
+                                config.saveSPString(config.SP_KELURAHAN, kelurahan);
+                                config.saveSPString(config.SP_RT, rt);
+                                config.saveSPString(config.SP_RW, rw);
+                                config.saveSPString(config.SP_JK, jk);
+                                config.saveSPString(config.SP_KECAMATAN, kecamatan);
+                                config.saveSPString(config.SP_KABUPATEN, kabupaten);
+                                config.saveSPString(config.SP_PROVINSI, provinsi);
+                                config.saveSPString(config.SP_STATUS_NIKAH, status_nikah);
+                                config.saveSPString(config.SP_STATUS_KK, status_kk);
+                                config.saveSPString(config.SP_PENDIDIKAN, pendidikan);
                                 // Shared Pref ini berfungsi untuk menjadi trigger session login
                                 config.saveSPBoolean(config.SP_SUDAH_LOGIN, true);
                                 Intent intent = new Intent(getApplicationContext(), HomeRWActivity.class)

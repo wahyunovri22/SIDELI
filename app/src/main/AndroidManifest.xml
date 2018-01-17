@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity"
+        <activity
+            android:name=".LoginActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,8 +23,8 @@
         <activity
             android:name=".Activity.UserActivity"
             android:label="@string/title_activity_user"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Activity.DaftarWargaActivity"
             android:label="@string/title_activity_daftar_warga"
@@ -35,10 +36,10 @@
         </activity>
         <activity
             android:name=".Activity.SettingActivity"
-            android:label="@string/title_activity_setting"
+            android:label="Setting"
             android:parentActivityName=".Activity.UserActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="creative.can.com.suratpengantar.Activity.UserActivity" />
@@ -46,39 +47,52 @@
         <activity
             android:name=".ActivityRT.HomeRTctivity"
             android:label="@string/title_activity_home_rtctivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ActivityRT.DetailPermintaanSuratMasukActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ActivityRT.DetailPermintaanSuratMasukActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ActivityRW.HomeRWActivity"
             android:label="@string/title_activity_home_rw"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Activity.DetailNewsDuaActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Activity.EditProfilActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Activity.SuratHilangActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Activity.SuratHewanActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Activity.SuratKetNikahActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Activity.SuratKetUsahaActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Activity.SuratBelumpernahMenikahActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Activity.SuratPernyataanKuasaActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Activity.SPTJMActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.DetailNewsDuaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.EditProfilActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SuratHilangActivity"
+            android:label="Surat Keterangan"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SuratHewanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SuratKetNikahActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SuratKetUsahaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SuratBelumpernahMenikahActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SuratPernyataanKuasaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SPTJMActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.SuratTidakMampuActivity"
             android:label="@string/title_surat_tidak_mampu"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name=".Activity.DetailSuratTidakMampuActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.DetailSuratTidakMampuActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Activity.BantuanActivity"></activity>
     </application>
 
 </manifest>

@@ -11,6 +11,10 @@
             android:icon="@drawable/ic_person_black_24dp"
             android:title="Profil" />
         <item
+            android:id="@+id/nav_surat"
+            android:icon="@drawable/ic_email_black_24dp"
+            android:title="Permintaan Surat" />
+        <item
             android:id="@+id/nav_surat_menunggu"
             android:icon="@drawable/ic_folder_black_24dp"
             android:title="Surat Menunggu Diketahui" />
@@ -36,6 +40,7 @@
             android:icon="@drawable/ic_settings_black_24dp"
             android:title="Setting" />
         <item
+            android:icon="@drawable/ic_keyboard_backspace_black_24dp"
             android:id="@+id/nav_logut"
             android:title="Logout" />
     </group>

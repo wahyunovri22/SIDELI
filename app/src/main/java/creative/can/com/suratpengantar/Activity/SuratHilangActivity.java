@@ -501,9 +501,9 @@ public class SuratHilangActivity extends AppCompatActivity {
         edtKk.setFocusable(false);
         edtNama.setText(config.getSPNama());
         edtNik.setText(config.getSpId());
-        edtNamaSurat.setText("Surat Keterangan Hilang");
+        edtNamaSurat.setText("Surat Keterangan");
         edtNamaSurat.setFocusable(false);
-        edtIdSurat.setText("4");
+        edtIdSurat.setText("1");
         edtIdSurat.setFocusable(false);
         edtWarganegara.setText("WNI");
         edtTanggal.setFocusable(false);

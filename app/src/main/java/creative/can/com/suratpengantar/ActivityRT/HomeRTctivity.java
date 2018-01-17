@@ -19,11 +19,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import creative.can.com.suratpengantar.Activity.BantuanActivity;
 import creative.can.com.suratpengantar.Activity.SettingActivity;
 import creative.can.com.suratpengantar.Activity.UserActivity;
 import creative.can.com.suratpengantar.Fragment.HistoryFragment;
 import creative.can.com.suratpengantar.Fragment.HistoryRTFragment;
 import creative.can.com.suratpengantar.Fragment.NewsFragment;
+import creative.can.com.suratpengantar.Fragment.PermintaanSuratFragment;
 import creative.can.com.suratpengantar.Fragment.PermintaanSuratMasukFragment;
 import creative.can.com.suratpengantar.Fragment.ProfilFragment;
 import creative.can.com.suratpengantar.Fragment.SuratMenungguDiketahuiFragment;
@@ -126,7 +128,8 @@ public class HomeRTctivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            Intent intent = new Intent(getApplicationContext(), BantuanActivity.class);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);
@@ -159,7 +162,13 @@ public class HomeRTctivity extends AppCompatActivity
                     .replace(R.id.layout_content_rt, mFragment)
                     .commit();
             getSupportActionBar().setTitle("Profil");
-        } else if (id == R.id.nav_surat_menunggu) {
+        }else if (id == R.id.nav_surat) {
+            FragmentManager manajer = getSupportFragmentManager();
+            manajer.beginTransaction()
+                    .replace(R.id.layout_content_rt, new PermintaanSuratFragment())
+                    .commit();
+            getSupportActionBar().setTitle("Permintaan Surat");
+        }else if (id == R.id.nav_surat_menunggu) {
             FragmentManager manajer = getSupportFragmentManager();
             manajer.beginTransaction()
                     .replace(R.id.layout_content_rt, new WaitingFragment())

@@ -19,11 +19,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import creative.can.com.suratpengantar.Activity.BantuanActivity;
 import creative.can.com.suratpengantar.Activity.SettingActivity;
 import creative.can.com.suratpengantar.Activity.UserActivity;
 import creative.can.com.suratpengantar.Fragment.HistoryFragment;
 import creative.can.com.suratpengantar.Fragment.HistoryRWFragment;
 import creative.can.com.suratpengantar.Fragment.NewsFragment;
+import creative.can.com.suratpengantar.Fragment.PermintaanSuratFragment;
 import creative.can.com.suratpengantar.Fragment.PermintaanSuratMasukFragment;
 import creative.can.com.suratpengantar.Fragment.PermintaanSuratMasukRWFragment;
 import creative.can.com.suratpengantar.Fragment.ProfilFragment;
@@ -120,7 +122,8 @@ public class HomeRWActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            Intent intent = new Intent(getApplicationContext(), BantuanActivity.class);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);
@@ -153,7 +156,13 @@ public class HomeRWActivity extends AppCompatActivity
                     .replace(R.id.layout_content_rw, mFragment)
                     .commit();
             getSupportActionBar().setTitle("Profil");
-        } else if (id == R.id.nav_surat_telaha_diketahui) {
+        } else if (id == R.id.nav_surat) {
+            FragmentManager manajer = getSupportFragmentManager();
+            manajer.beginTransaction()
+                    .replace(R.id.layout_content_rw, new PermintaanSuratFragment())
+                    .commit();
+            getSupportActionBar().setTitle("Permintaan Surat");
+        }else if (id == R.id.nav_surat_telaha_diketahui) {
             FragmentManager manajer = getSupportFragmentManager();
             manajer.beginTransaction()
                     .replace(R.id.layout_content_rw, new PermintaanSuratMasukRWFragment())
